@@ -3,7 +3,7 @@
     "default": {
       "runner": "nx/tasks-runners/default",
       "options": {
-        "cacheableOperations": ["build"]
+        "cacheableOperations": []
       }
     }
   },
@@ -13,14 +13,20 @@
         "default",
         "{workspaceRoot}/.eslintrc.json",
         "{workspaceRoot}/.eslintignore"
-      ]
+      ],
+      "cache": false
     },
     "test": {
       "inputs": ["default", "^default"],
-      "dependsOn": ["^test", "build"]
+      "dependsOn": ["^test", "build"],
+      "cache": false
     },
     "build": {
-      "dependsOn": ["clean", "^clean", "^build"]
+      "dependsOn": ["clean", "^clean", "^build"],
+      "cache": false
+    },
+    "start": {
+      "cache": false
     }
   },
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
