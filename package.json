@@ -8,11 +8,11 @@
   ],
   "scripts": {
     "clean": "lerna run clean",
-    "build": "npx nx run-many -t build --all",
+    "build": "npx nx run-many -t build --all --skip-nx-cache",
     "doc": "lerna run doc",
-    "test": "npx nx run-many -t test --all --parallel=false",
+    "test": "npx nx run-many -t test --all --parallel=false --skip-nx-cache",
     "graph": "npx nx graph",
-    "start": "lerna run start",
+    "start": "lerna run start --skip-nx-cache",
     "serve": "nx run @openscd/distribution:serve"
   },
   "repository": {
@@ -22,7 +22,7 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "lerna": "^7.1.4",
-    "nx": "18.3.4"
+    "nx": "^18.3.4"
   },
   "optionalDependencies": {
     "@nx/nx-linux-x64-gnu": "18.3.4"

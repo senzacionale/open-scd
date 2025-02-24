@@ -36,7 +36,9 @@
     "lit": "^2.2.7",
     "lit-translate": "^1.2.1",
     "marked": "^4.0.10",
-    "panzoom": "^9.4.2"
+    "panzoom": "^9.4.2",
+    "scl-wizarding": "github:OpenEnergyTools/scl-wizarding#main",
+    "scl-substation-editor": "github:senzacionale/scl-substation-editor#main"
   },
   "scripts": {
     "clean": "rimraf dist",
